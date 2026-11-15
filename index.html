@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oumarou & Salamatou – Invitation de mariage</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@500;600&family=Great+Vibes&family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--night:#082623;--emer:#0f4a43;--gold:#c9a35a;--gold2:#ecd79c;--golddk:#8a6522;--ivory:#f8f2e4;--sand:#efe6d0;--ink:#1d2b28;--soft:#5b6b66;
+ --tile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c9a35a' stroke-width='1'%3E%3Crect x='20' y='20' width='40' height='40'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3Cpath d='M0 0L20 20M80 0L60 20M0 80L20 60M80 80L60 60'/%3E%3C/g%3E%3C/svg%3E");
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:62px;background:var(--night)}
+body{margin:0;font:400 20px/1.65 "Cormorant Garamond",Georgia,serif;color:var(--ink);text-align:center;background:var(--ivory)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--night);z-index:9}
+h1,h2,h3,p{margin:0}
+.sans{font-family:Montserrat,system-ui,sans-serif}
+.ar{font-family:Amiri,serif;direction:rtl}
+svg.deco{position:absolute;pointer-events:none}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(8,38,35,.94);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,163,90,.35);font:500 12px Montserrat,sans-serif}
+nav b{font:600 14px Cinzel,serif;letter-spacing:.08em;color:var(--gold2)}
+nav div{display:flex;gap:16px}nav a{color:var(--ivory);text-decoration:none;letter-spacing:.05em}
+@media(max-width:430px){nav div a:nth-child(n+4){display:none}}
+section{position:relative;padding:76px 20px;overflow:hidden}
+.dark{background:var(--night) var(--tile);background-size:80px;color:var(--ivory)}
+.dark::before,.light::before{content:"";position:absolute;inset:0;pointer-events:none}
+.dark::before{background:radial-gradient(ellipse at 50% 0,rgba(15,74,67,.7),rgba(8,38,35,.92) 70%)}
+.light{background:var(--ivory) var(--tile);background-size:80px}
+.light::before{background:rgba(248,242,228,.93)}
+.wrap{position:relative;z-index:1;max-width:520px;margin:0 auto}
+h2.t{font:italic 600 42px/1.15 "Cormorant Garamond",serif;color:var(--golddk)}
+.dark h2.t{color:var(--gold2)}
+.kick{font:500 12px Montserrat,sans-serif;letter-spacing:.16em;color:var(--soft);margin-top:4px}
+.dark .kick{color:rgba(248,242,228,.7)}
+.orn{display:block;margin:14px auto 28px;width:220px;height:24px;color:var(--gold);stroke:currentColor;fill:none}
+/* lanterns */
+.lamps{position:relative;height:150px;max-width:520px;margin:-76px auto 26px;z-index:1}
+.lamps svg{position:absolute;top:0;transform-origin:50% 0;animation:sway 6s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(236,215,156,.45))}
+.lamps svg:nth-child(2){animation-delay:-2s}.lamps svg:nth-child(3){animation-delay:-4s}
+@keyframes sway{50%{transform:rotate(3.5deg)}0%,100%{transform:rotate(-3.5deg)}}
+/* arch card */
+.arch{position:relative;background:var(--ivory);color:var(--ink);border:2px solid var(--gold);border-radius:999px 999px 6px 6px;padding:96px 24px 40px;box-shadow:0 0 0 9px var(--night),0 0 0 10px var(--gold),0 24px 50px rgba(0,0,0,.45)}
+.arch::after{content:"";position:absolute;inset:8px;border:1px solid rgba(201,163,90,.7);border-radius:999px 999px 2px 2px;pointer-events:none}
+.fam{font-size:18px;line-height:1.8;color:var(--soft)}
+.fam b{display:block;font:600 15px Cinzel,serif;letter-spacing:.08em;color:var(--emer);margin-top:2px}
+.names{font:400 56px/1.1 "Great Vibes",cursive;color:var(--emer);margin:8px 0}
+.amp{display:block;font-size:32px;color:var(--gold)}
+.date{font:600 20px Cinzel,serif;letter-spacing:.08em;color:var(--golddk)}
+.count{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.count div{min-width:62px;padding:9px 2px;border:1px solid var(--gold);background:var(--sand);border-radius:40px 40px 4px 4px}
+.count b{display:block;font:600 24px Cinzel,serif;color:var(--emer)}
+.count span{font:500 10px Montserrat,sans-serif;letter-spacing:.1em;color:var(--soft)}
+.verse{font-size:17px;color:var(--soft);font-style:italic;margin-top:6px;line-height:1.5}
+/* programme */
+.day{position:relative;background:#fffdf7;margin:16px 0;padding:22px 16px 18px;border:1px solid var(--gold);outline:1px solid rgba(201,163,90,.5);outline-offset:4px}
+.day::before{content:"✦";position:absolute;left:50%;top:-13px;transform:translateX(-50%);background:var(--ivory);color:var(--gold);padding:0 8px;font-size:18px;line-height:1}
+.day.main{background:var(--emer);color:var(--ivory);border-color:var(--gold2)}
+.day.main::before{background:var(--ivory)}
+.day h3{font:600 20px Cinzel,serif;letter-spacing:.06em;color:var(--emer)}
+.day.main h3{color:var(--gold2)}
+.ev{margin-top:10px;font-size:19px}.ev b{font:600 14px Montserrat,sans-serif;color:var(--golddk);letter-spacing:.04em}
+.day.main .ev b{color:var(--gold2)}
+.ev em{display:block;font:500 13px Montserrat,sans-serif;color:var(--soft);font-style:normal;margin-top:2px}
+.day.main .ev em{color:rgba(248,242,228,.75)}
+/* story */
+.chap{margin:0 0 34px}
+.chap h3{font:600 24px Cinzel,serif;letter-spacing:.07em;color:var(--gold2)}
+.chap p{font-size:20px;margin-top:8px;color:rgba(248,242,228,.92)}
+.chap:last-child{margin:0}
+.chap .orn{margin:26px auto 0;width:140px}
+/* form */
+form{position:relative;background:#fffdf7;padding:26px 20px;border:1px solid var(--gold);outline:1px solid rgba(201,163,90,.5);outline-offset:5px;text-align:left;box-shadow:0 16px 36px rgba(8,38,35,.15)}
+label,legend{display:block;font:600 12px Montserrat,sans-serif;color:var(--emer);margin:14px 0 6px;letter-spacing:.04em;padding:0}
+input[type=text],select,textarea{width:100%;font:400 16px Montserrat,sans-serif;padding:12px;border:1px solid #d8c9a4;background:var(--ivory);color:var(--ink);border-radius:3px}
+textarea{min-height:100px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--golddk);outline-offset:2px}
+fieldset{border:0;padding:0;margin:0}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{position:absolute;opacity:0}
+.choice span{display:block;text-align:center;padding:12px 6px;border:1px solid #d8c9a4;font:600 12px Montserrat,sans-serif;letter-spacing:.05em;color:var(--soft);cursor:pointer;background:var(--ivory)}
+.choice input:checked+span{background:var(--emer);color:var(--gold2);border-color:var(--emer)}
+.choice input:focus-visible+span{outline:2px solid var(--golddk);outline-offset:2px}
+.btn{display:block;width:100%;margin-top:20px;padding:15px;border:1px solid var(--gold);background:var(--emer);color:var(--gold2);font:600 13px Montserrat,sans-serif;letter-spacing:.12em;cursor:pointer;border-radius:3px;text-align:center;text-decoration:none}
+.btn.gold{background:var(--gold);color:var(--night);border-color:var(--gold2)}
+.btn[aria-disabled=true]{opacity:.6;pointer-events:none}
+#msg{margin-top:14px;font:500 14px Montserrat,sans-serif;text-align:center;min-height:20px;color:var(--emer)}
+#msg.err{color:#a3261f}
+/* guestbook */
+.wish{background:rgba(248,242,228,.07);border:1px solid rgba(201,163,90,.5);padding:14px 16px;margin:14px 0;text-align:left}
+.wish .h{display:flex;justify-content:space-between;gap:8px;font:600 13px Montserrat,sans-serif;color:var(--gold2)}
+.wish .h small{font-weight:500;color:rgba(248,242,228,.65)}
+.wish p{font-size:18px;font-style:italic;margin-top:4px;overflow-wrap:anywhere}
+.wish .tag{font:600 10px Montserrat,sans-serif;letter-spacing:.08em;color:var(--gold);margin-top:6px;text-align:right}
+.empty{font:500 14px Montserrat,sans-serif;color:rgba(248,242,228,.7)}
+footer{background:var(--night);color:var(--ivory);padding:20px 20px 80px}
+/* cover : portail */
+#cover{position:fixed;inset:0;z-index:30;background:var(--night);display:flex;align-items:center;justify-content:center;transition:opacity .8s .9s,visibility 0s 1.7s;overflow:hidden}
+#cover.gone{opacity:0;visibility:hidden}
+.pn{position:absolute;top:0;bottom:0;width:50%;background:var(--emer) var(--tile);background-size:80px;transition:transform 1.3s cubic-bezier(.7,0,.2,1);z-index:1}
+.pn.l{left:0;border-right:2px solid var(--gold);box-shadow:inset -30px 0 50px rgba(0,0,0,.35)}
+.pn.r{right:0;border-left:2px solid var(--gold);box-shadow:inset 30px 0 50px rgba(0,0,0,.35)}
+#cover.open .l{transform:translateX(-101%)}#cover.open .r{transform:translateX(101%)}
+.crest{position:relative;z-index:3;text-align:center;transition:opacity .5s}
+#cover.open .crest{opacity:0}
+.medal{width:172px;height:172px;margin:0 auto;border-radius:50%;background:radial-gradient(circle,#0c3a35,var(--night));border:2px solid var(--gold);outline:1px solid var(--gold);outline-offset:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(201,163,90,.35)}
+.medal .ar{font-size:26px;color:var(--gold2);line-height:1.5}
+.medal .names{font-size:30px;color:var(--gold2);margin:0;line-height:1.05}
+.medal .amp{font-size:18px}
+#open{margin-top:34px;font:600 12px Montserrat,sans-serif;letter-spacing:.2em;color:var(--night);background:var(--gold);border:1px solid var(--gold2);padding:15px 30px;cursor:pointer;border-radius:3px}
+.crest .hint{font:italic 400 18px "Cormorant Garamond",serif;color:var(--ivory);margin-top:16px}
+#cover .lamps{position:absolute;top:0;left:0;right:0;margin:0;z-index:4;height:150px;transition:opacity .5s}
+#cover.open .lamps{opacity:0}
+/* musique */
+#music{position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:10;width:50px;height:50px;border-radius:50%;border:1px solid var(--gold);background:var(--night);color:var(--gold2);font-size:22px;cursor:pointer;line-height:1}
+#music.play{animation:ring 2.6s infinite}
+#music:not(.play){opacity:.7}
+@keyframes ring{50%{box-shadow:0 0 0 9px rgba(201,163,90,.18)}}
+#pick{display:none;position:fixed;left:12px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:10;font:500 12px Montserrat,sans-serif;max-width:200px;color:var(--ink);background:var(--ivory)}
+@media(prefers-reduced-motion:reduce){.lamps svg,#music.play{animation:none}html{scroll-behavior:auto}.pn{transition:none}}
+@media(max-width:400px){.names{font-size:46px}.arch{padding:84px 18px 36px}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="glow" cx="50%" cy="55%" r="60%"><stop offset="0" stop-color="#fff6d2"/><stop offset=".6" stop-color="#f0c866"/><stop offset="1" stop-color="#b9862d"/></radialGradient>
+<symbol id="fan" viewBox="0 0 60 150">
+ <path d="M30 0V20" stroke="#c9a35a" stroke-width="1.5"/>
+ <circle cx="30" cy="22" r="3.5" fill="#c9a35a"/>
+ <path d="M17 38Q30 14 43 38Z" fill="#c9a35a"/>
+ <path d="M15 38H45L51 94Q30 110 9 94Z" fill="url(#glow)" stroke="#c9a35a" stroke-width="2"/>
+ <path d="M30 38V104M22 38L17 100M38 38L43 100" stroke="#8a6522" stroke-width="1.4" opacity=".7" fill="none"/>
+ <path d="M10 94Q30 110 50 94L44 110H16Z" fill="#c9a35a"/>
+ <path d="M30 110V130" stroke="#c9a35a" stroke-width="1.5"/>
+ <path d="M30 128L25 146H35Z" fill="#c9a35a"/>
+</symbol>
+<symbol id="orn" viewBox="0 0 220 24"><path d="M0 12H88M132 12H220" stroke-width="1"/><path d="M110 3L119 12L110 21L101 12Z" fill="currentColor"/><path d="M92 12L98 8M92 12L98 16M128 12L122 8M128 12L122 16" stroke-width="1"/><circle cx="82" cy="12" r="2" fill="currentColor"/><circle cx="138" cy="12" r="2" fill="currentColor"/></symbol>
+</defs></svg>
+
+<div id="cover">
+  <div class="lamps" aria-hidden="true">
+    <svg style="left:8%" width="46" height="115" viewBox="0 0 60 150"><use href="#fan"/></svg>
+    <svg style="left:calc(50% - 30px)" width="60" height="150" viewBox="0 0 60 150"><use href="#fan"/></svg>
+    <svg style="right:8%" width="46" height="115" viewBox="0 0 60 150"><use href="#fan"/></svg>
+  </div>
+  <div class="pn l"></div><div class="pn r"></div>
+  <div class="crest">
+    <div class="medal"><div class="ar">بسم الله</div><div class="names">Oumarou<span class="amp">&amp;</span>Salamatou</div></div>
+    <button id="open">OUVRIR L’INVITATION</button>
+    <div class="hint">Vous êtes invité(e) à notre mariage</div>
+  </div>
+</div>
+
+<nav><b>O &amp; S</b><div><a href="#invitation">Invitation</a><a href="#programme">Programme</a><a href="#histoire">Histoire</a><a href="#rsvp">RSVP</a></div></nav>
+
+<section id="invitation" class="dark">
+  <div class="lamps" aria-hidden="true">
+    <svg style="left:6%" width="52" height="130" viewBox="0 0 60 150"><use href="#fan"/></svg>
+    <svg style="left:calc(50% - 34px)" width="68" height="170" viewBox="0 0 60 150"><use href="#fan"/></svg>
+    <svg style="right:6%" width="52" height="130" viewBox="0 0 60 150"><use href="#fan"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="arch">
+      <div class="sans" style="font-size:12px;letter-spacing:.3em;color:var(--soft)">FAIRE PART</div>
+      <div class="ar" style="font-size:40px;line-height:1.7;color:var(--emer);margin:6px 0 0">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+      <p class="fam" style="font-size:16px">Au nom d’Allah, le Tout Miséricordieux, le Très Miséricordieux</p>
+      <svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg>
+      <p class="fam"><b>LA GRANDE FAMILLE ABOUBACAR KANKAMA</b>et famille BABANYA<br>&amp;<b>LA GRANDE FAMILLE MALAM ISSA</b></p>
+      <svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg>
+      <p class="fam" style="font-style:italic">Ont l’immense joie de vous faire part du mariage de leurs enfants</p>
+      <div class="names">Oumarou Aboubacar<span class="amp">&amp;</span>Salamatou Djibo Laïla</div>
+      <div class="date">Vendredi 20 Novembre 2026</div>
+      <p class="fam">Insha Allah, à Yaoundé</p>
+      <div class="count" id="count"></div>
+      <svg class="orn" viewBox="0 0 220 24" style="margin-top:28px"><use href="#orn"/></svg>
+      <div class="ar" style="font-size:25px;line-height:1.9;color:var(--emer)">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا</div>
+      <p class="verse">« Et parmi Ses signes Il a créé de vous, pour vous, des épouses pour que vous viviez en tranquillité avec elles »<br>Sourate Ar-Rum, 30:21</p>
+    </div>
+  </div>
+</section>
+
+<section id="programme" class="light">
+  <div class="wrap">
+    <h2 class="t">Programme</h2><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg>
+    <div class="day"><h3>Mercredi 18 Novembre</h3><p class="ev"><b>16h</b> – Bride to be<em>à la Briqueterie</em></p></div>
+    <div class="day"><h3>Jeudi 19 Novembre</h3><p class="ev"><b>6h</b> – Couscous (gâteau traditionnel)<em>à Biyem-Assi</em></p></div>
+    <div class="day main"><h3>Vendredi 20 Novembre</h3>
+      <p class="ev"><b>13h</b> – Daurin Aure<em>à la Grande Mosquée de la Briqueterie</em></p>
+      <p class="ev"><b>17h</b> – Wankan Amarya (vernissage de la mariée)<em>à Biyem-Assi</em></p></div>
+    <div class="day"><h3>Samedi 21 Novembre</h3>
+      <p class="ev"><b>10h</b> – Mairie<em>à Yaoundé 2e</em></p>
+      <p class="ev"><b>17h</b> – Boudan Kai<em>à l’École de Police (chez la belle famille)</em></p></div>
+    <div class="day"><h3>Dimanche 22 Novembre</h3><p class="ev"><b>17h</b> – Walima Descente Sirpacam<em>à la Briqueterie</em></p></div>
+    <div class="day"><h3>Lundi 23 Novembre</h3><p class="ev"><b>Départ de la mariée</b><em>dans son domicile conjugal</em></p></div>
+  </div>
+</section>
+
+<section id="histoire" class="dark">
+  <div class="wrap">
+    <h2 class="t">Notre histoire</h2><div class="kick">DEUX CŒURS, UN SEUL CHEMIN</div><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg>
+    <div class="chap"><h3>La rencontre</h3><p>Tout a commencé par un simple regard, une parole échangée au détour d’un jour ordinaire. Rien ne laissait deviner que ce moment discret deviendrait le début d’une grande histoire.</p><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg></div>
+    <div class="chap"><h3>L’amitié qui grandit</h3><p>Peu à peu, les conversations se sont allongées et les silences sont devenus doux. L’un et l’autre ont découvert une présence rassurante, une patience, une façon de rire qui ressemblait à celle d’un foyer.</p><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg></div>
+    <div class="chap"><h3>L’évidence</h3><p>La vie leur a appris la tendresse, et que certains cœurs se reconnaissent sans bruit. L’amour est venu si naturellement qu’ils l’ont remarqué à peine, jusqu’au jour où il est devenu une évidence.</p><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg></div>
+    <div class="chap"><h3>Le grand oui</h3><p>Avec la bénédiction de leurs familles et la grâce d’Allah, ils ont décidé de bâtir ensemble. Ce jour n’est pas une fin : c’est le commencement de toutes les vies qu’ils vivront désormais côte à côte.</p></div>
+  </div>
+</section>
+
+<section id="rsvp" class="light">
+  <div class="wrap">
+    <h2 class="t">Confirmer ma présence</h2><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg>
+    <p style="margin-bottom:26px;color:var(--soft)">Votre présence à notre mariage nous ferait un immense honneur.</p>
+    <form id="form" novalidate>
+      <label for="nm">Nom complet *</label>
+      <input id="nm" type="text" maxlength="80" autocomplete="name" placeholder="M. et Mme Dupont" required>
+      <fieldset><legend>Serez-vous présent(e) ?</legend>
+        <div class="choice">
+          <label style="margin:0"><input type="radio" name="att" value="oui" checked><span>OUI, PRÉSENT(E)</span></label>
+          <label style="margin:0"><input type="radio" name="att" value="non"><span>NON, ABSENT(E)</span></label>
+        </div></fieldset>
+      <label for="gs">Nombre de personnes</label>
+      <select id="gs"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6 ou plus</option></select>
+      <label for="ms">Message pour les mariés</label>
+      <textarea id="ms" maxlength="400" placeholder="Félicitations pour votre mariage…"></textarea>
+      <button class="btn" type="submit" id="send">ENVOYER MA RÉPONSE</button>
+      <div id="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section id="livre" class="dark">
+  <div class="wrap">
+    <h2 class="t">Livre d’or &amp; vœux</h2><div class="kick">LES MESSAGES DE NOS INVITÉS</div><svg class="orn" viewBox="0 0 220 24"><use href="#orn"/></svg>
+    <div id="wishes"><p class="empty">Chargement des messages…</p></div>
+    <svg class="orn" viewBox="0 0 220 24" style="margin-top:44px"><use href="#orn"/></svg>
+    <h2 class="t" style="font-size:34px">Rejoignez-nous</h2>
+    <p style="margin-top:8px;color:rgba(248,242,228,.85)">Retrouvez la famille et les invités dans le groupe WhatsApp du mariage pour suivre toutes les informations.</p>
+    <a class="btn gold" id="wag" href="#" target="_blank" rel="noopener">REJOINDRE LE GROUPE WHATSAPP</a>
+  </div>
+</section>
+
+<footer>
+  <div class="names" style="font-size:40px;color:var(--gold2)">Oumarou &amp; Salamatou</div>
+  <p style="font-style:italic;margin-top:4px">La présence de tout un chacun est un précieux cadeau.</p>
+</footer>
+
+<button id="music" aria-label="Activer ou couper la musique" title="Musique">♪</button>
+<input id="pick" type="file" accept="audio/*" aria-label="Choisir le morceau de musique">
+<audio id="song" loop preload="auto" src="baba-nagani-ina-so.mp3"></audio>
+
+<script>
+(function(){
+  /* ===== À MODIFIER ===== */
+  var WA_GROUP = 'https://chat.whatsapp.com/EbSqb8lqaa5FYuuUVFRYYs';   /* lien du groupe WhatsApp, ex. https://chat.whatsapp.com/XXXX */
+  /* ====================== */
+
+  /* ===== STOCKAGE : Supabase ===== */
+  var SB_URL = 'https://qywcddjpdbhbbxucjjgh.supabase.co';  /* à vérifier : Project Settings > API */
+  var SB_KEY = 'sb_publishable_BUGXURNWqHxonWbUB-DpqA_vos6-rEB';              /* clé « Publishable key » (sb_publishable_...) */
+  var H = {apikey: SB_KEY, 'Content-Type': 'application/json'};
+  var onList = null, onFail = function(){};
+  async function initStore(){ return true }
+  function refresh(){
+    fetch(SB_URL + '/rest/v1/wishes?select=name,attending,message,created_at&order=created_at.desc&limit=60', {headers: H})
+      .then(function(r){ if(!r.ok) throw 0; return r.json() })
+      .then(function(rows){ onList(rows.map(function(w){ return {name:w.name, attending:w.attending, message:w.message, createdAt:w.created_at} })) })
+      .catch(onFail);
+  }
+  async function save(o){
+    var r = await fetch(SB_URL + '/rest/v1/wishes', {method:'POST', headers: Object.assign({Prefer:'return=minimal'}, H),
+      body: JSON.stringify({name:o.name, attending:o.attending, guests:o.guests, message:o.message})});
+    if(!r.ok) throw new Error('save');
+    refresh();
+  }
+  function subscribe(cb, fail){ onList = cb; onFail = fail; refresh() }
+  /* =============================== */
+
+  var $=function(i){return document.getElementById(i)};
+  var song=$('song'),music=$('music'),pick=$('pick'),wag=$('wag');
+  if(WA_GROUP){wag.href=WA_GROUP}else{wag.setAttribute('aria-disabled','true');wag.textContent='LIEN DU GROUPE BIENTÔT DISPONIBLE'}
+
+  /* Musique */
+  function play(){var r=song.play();if(r&&r.then)r.then(function(){music.classList.add('play')}).catch(function(){music.classList.remove('play')})}
+  $('open').addEventListener('click',function(){$('cover').classList.add('open');setTimeout(function(){$('cover').classList.add('gone')},900);play()});
+  music.addEventListener('click',function(){
+    if(song.error){pick.click();return}
+    if(song.paused)play();else{song.pause();music.classList.remove('play')}
+  });
+  song.addEventListener('error',function(){pick.style.display='block'});
+  pick.addEventListener('change',function(){
+    var f=pick.files&&pick.files[0];if(!f)return;
+    song.src=URL.createObjectURL(f);song.load();play();pick.style.display='none';
+  });
+
+  /* Compte à rebours : Daurin Aure, vendredi 20 novembre 2026, 13h (UTC+1) */
+  var target=new Date('2026-11-20T13:00:00+01:00').getTime(),box=$('count');
+  function tick(){
+    var d=target-Date.now();
+    if(d<=0){box.innerHTML='<div style="min-width:0;padding:10px 20px"><b style="font-size:18px">Qu’Allah bénisse ce jour</b></div>';return}
+    var j=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
+    box.innerHTML=[[j,'JOURS'],[h,'HEURES'],[m,'MIN'],[s,'SEC']].map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('');
+  }
+  tick();setInterval(tick,1000);
+
+  /* Livre d’or */
+  var list=$('wishes'),msg=$('msg');
+  function fmt(t){try{return new Date(t).toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'})}catch(e){return ''}}
+  function note(t){list.textContent='';var p=document.createElement('p');p.className='empty';p.textContent=t;list.appendChild(p)}
+  function render(items){
+    var shown=items.filter(function(w){return w.message});
+    if(!shown.length){note('Soyez le premier à laisser un mot aux mariés.');return}
+    list.textContent='';
+    shown.forEach(function(w){
+      var el=document.createElement('div');el.className='wish';
+      var h=document.createElement('div');h.className='h';
+      var n=document.createElement('span');n.textContent=String(w.name||'Invité').slice(0,80);
+      var dt=document.createElement('small');dt.textContent=fmt(w.createdAt);
+      h.appendChild(n);h.appendChild(dt);el.appendChild(h);
+      var p=document.createElement('p');p.textContent='« '+String(w.message).slice(0,400)+' »';el.appendChild(p);
+      if(w.attending){var t=document.createElement('div');t.className='tag';t.textContent='SERA PRÉSENT(E)';el.appendChild(t)}
+      list.appendChild(el);
+    });
+  }
+  initStore().then(function(){subscribe(render,function(){note('Les messages des invités apparaîtront ici.')})});
+
+  /* RSVP */
+  function say(t,err){msg.textContent=t;msg.className=err?'err':''}
+  $('form').addEventListener('submit',async function(e){
+    e.preventDefault();
+    var name=$('nm').value.trim();
+    if(!name){say('Veuillez indiquer votre nom.',true);$('nm').focus();return}
+    var att=document.querySelector('input[name=att]:checked').value==='oui';
+    var o={name:name.slice(0,80),attending:att,guests:att?$('gs').value:'0',message:$('ms').value.trim().slice(0,400),createdAt:Date.now()};
+    var btn=$('send');btn.disabled=true;say('Envoi en cours…');
+    try{await save(o);say('Merci '+name.split(' ')[0]+' ! Votre réponse a bien été enregistrée.');$('form').reset()}
+    catch(err){say('L’envoi n’est pas possible pour le moment. Merci de réessayer plus tard.',true)}
+    btn.disabled=false;
+  });
+})();
+</script>
+</body>
+</html>
